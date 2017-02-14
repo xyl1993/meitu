@@ -11,3 +11,6 @@ d).  npm start<br>
 e).  打开方式-》localhost:3000
 #备注
 webpack很多配置还没完成，比如热加载等等。。<br>初次提交仅仅搭建框架，功能代码仍在完善中
+
+# 201702014更新<br>
+express的热加载模块配置完成，修改less为sass，
