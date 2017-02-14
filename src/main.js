@@ -3,14 +3,15 @@
 import Vue from 'vue'
 import app from './app.vue'
 import router from './router/index.js'
-
 new Vue({
   el: '#app',
   router,
   template: '<app/>',
   components: { app }
 })
-
+if(module.hot) {
+    module.hot.accept();
+}
 // 务必在加载 Vue 之后，立即同步设置以下内容
 Vue.config.devtools = true;
 Vue.config.ignoredElements = [

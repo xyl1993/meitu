@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('meitu:server');
 var http = require('http');
-
+var reload = require('reload');
 /**
  * Get port from environment and store in Express.
  */
@@ -20,12 +20,14 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
-
+reload(server, app);
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port,function(){
+    console.log('App (dev) is now running on port 3000!');
+});
 server.on('error', onError);
 server.on('listening', onListening);
 

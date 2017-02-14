@@ -26,3 +26,6 @@
       name: 'navItem'
     }
 </script>
+<style lang="sass">
+     //sass语法样式
+</style>

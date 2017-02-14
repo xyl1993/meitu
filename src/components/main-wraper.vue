@@ -28,6 +28,16 @@
         $.getJSON("./mainWraper.json",function(data){
             _self.mainWraperDatas = data.data;
         });
+        $.ajax({
+          type: "POST",
+          url: 'http://localhost:8080/popcorn/cart/getProvinces',
+          headers:{
+            'Content-Type':'application/json;charset=UTF-8'
+          },
+          dataType: 'json'
+        }).success(function(res){
+          console.log(res);
+        });
       },
       beforeUpdate:function(){
       },
@@ -36,3 +46,6 @@
       }
     }
 </script>
+<style lang="sass">
+     //sass语法样式
+</style>

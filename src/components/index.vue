@@ -12,6 +12,7 @@
     </div>
 </template>
 <script>
+
 import navItem from './nav-item.vue'
 import headerSeach from './header-seach.vue'
 import mainWraper from './main-wraper.vue'
