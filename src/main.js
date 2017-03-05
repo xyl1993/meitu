@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import app from './app.vue'
 import router from './router/index.js'
+require("!style!css!sass!../bower_components/foundation/css/foundation.css")
 new Vue({
   el: '#app',
   router,

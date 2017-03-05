@@ -160,3 +160,9 @@
 [2017-02-14 14:08:31.259] [ERROR] normal - GET /style.css
 [2017-02-14 14:28:58.999] [ERROR] normal - GET /dist/index.html
 [2017-02-14 14:33:20.337] [ERROR] normal - GET /dist/da92574d65ef3585af59.hot-update.json
+[2017-02-20 13:50:56.093] [ERROR] normal - GET /favicon.ico
+[2017-03-04 10:26:14.397] [ERROR] normal - GET /favicon.ico
+[2017-03-04 14:59:22.854] [ERROR] normal - GET /dist/style.css
+[2017-03-04 15:31:59.146] [ERROR] normal - GET /dist/vendor.js
+[2017-03-04 15:37:53.289] [ERROR] normal - GET /dist/vendor.js
+[2017-03-04 15:49:31.187] [ERROR] normal - GET /dist/0f36c3a53e53d31272dd.hot-update.json

@@ -8,6 +8,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 //定义了一些文件夹的路径
 var ROOT_PATH = path.resolve(__dirname);
 var SRC_PATH = path.resolve(ROOT_PATH, 'src');
+var BOWER_PATH = path.resolve(ROOT_PATH, 'bower_components');
 var TEM_PATH = path.resolve(ROOT_PATH, 'views/template');
 
 module.exports = {
@@ -19,12 +20,13 @@ module.exports = {
         port:3000 //端口你可以自定义
     },
     entry: {
-        main: [SRC_PATH + '/main.js',hotMiddlewareScript]//,SRC_PATH + '/router/index.js'
+        build: [SRC_PATH + '/main.js',hotMiddlewareScript],//,SRC_PATH + '/router/index.js''
+        vendor: [BOWER_PATH+'/foundation/js/foundation.min.js']
     },
     output: {
         path: path.resolve(ROOT_PATH, './public/dist'),
         publicPath: publicPath,
-        filename: 'build.js'
+        filename: '[name].js'
     },
     module: {
         loaders: [/*{
@@ -92,6 +94,16 @@ module.exports = {
         //new ExtractTextPlugin("style.css"), //提取出来的样式放在style.css文件中
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js'),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          }
+        })
+        // new webpack.ProvidePlugin({
+        //   $: "jquery",
+        //   jQuery: "jquery"
+        // })
     ]
 }

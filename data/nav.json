@@ -1,0 +1,25 @@
+{"data": [
+    	{
+    		"titleName": "首页",
+    		"titleSrc": "/",
+            "isActive":true,
+            "childMenu":[
+               
+            ]
+    	},
+        {
+            "titleName": "壁纸图片",
+            "titleSrc": "/",
+            "childMenu": [{
+                "titleName": "电脑图片",
+               "titleSrc": "/"
+           },
+           {
+                "titleName": "手机壁纸",
+               "titleSrc": "/"
+            }
+               
+            ]
+        }
+    ],
+    "code":200}
